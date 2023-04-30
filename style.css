@@ -8,64 +8,86 @@
   --Dark-gray: hsl(0, 0%, 59%);
 }
 
-body {
+* {box-sizing: border-box;}
+
+html > body {
   font-family: 'Kumbh Sans', sans-serif;
+  padding: 0em 1.5em 0em 1.5em;
+  background-color: var(--Dark-cyan);
 }
 
-@media only screen and (max-width: 475px) {
-  html > body {
-    background-color: var(--Dark-cyan);
-  }
+.flex-container {
+  min-height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
 
-  .card {
-    padding: 2em;
+.card {
+    padding: 2em 2em 0em 2em;
     background: url(./images/bg-pattern-card.svg) no-repeat, white;
     background-position: top center;
     background-size: contain;
-    border-radius: 2em;
-    margin: 8em auto;
-  }
+    border-radius: 1em;
+}
 
-  .card__image {
+.card__image {
     display: block;
     margin: auto;
     margin-top: 4em;
-    border: 4px solid white;
+    border: 5px solid white;
     border-radius: 4em;
-  }
+}
 
-  .card__paragraph--bold {
-    font-weight: 700;
-    font-size: 1.2rem;
-  }
-
-  .card__p-age--color {
-    color: var(--Dark-gray);
-  }
-
-  .card__pcity {
-    text-align: center;
-    color: var(--Dark-gray);
-  }
-
-  .card__paragraph--light {
-    color: var(--Dark-gray);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    font-weight: 400;
-  }
-
-  .flex-row {
+.flex-row {
     display: flex;
     justify-content: center;
     gap: 2%;
-  }
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+}
 
-  .grid {
+.card__heading {
+    font-size: 1.2rem;
+}
+
+.card__paragraph--bold {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.card__p-age--color {
+    color: var(--Dark-gray);
+    font-size: 1.2rem;
+}
+
+.card__pcity {
+    text-align: center;
+    color: var(--Dark-gray);
+    font-size: 0.9rem;
+    margin-bottom: 4em;
+}
+
+.grid {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr 1fr;
     place-items: center;
     grid-auto-flow: column;
-  }
-
 }
+
+.card__paragraph--light {
+    color: var(--Dark-gray);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+
+
+@media only screen and (width > 475px) {
+  .card {
+    min-width: 20%;
+    align-self: center;
+  }
+}
+
