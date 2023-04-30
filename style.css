@@ -13,11 +13,16 @@
 html > body {
   font-family: 'Kumbh Sans', sans-serif;
   padding: 0em 1.5em 0em 1.5em;
-  background-color: var(--Dark-cyan);
+  background-image: url(./images/bg-pattern-top.svg), 
+  url(./images/bg-pattern-bottom.svg);
+  background: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+  background-repeat: no-repeat, no-repeat;
+  background-color: hsl(185deg, 75%, 39%);
 }
 
 .flex-container {
-  min-height: 100vh;
+  min-height: 98vh;
   justify-content: center;
   display: flex;
   flex-direction: column;
