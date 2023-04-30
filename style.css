@@ -7,3 +7,65 @@
   --Dark-grayish-blue: hsl(227, 10%, 46%);
   --Dark-gray: hsl(0, 0%, 59%);
 }
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+@media only screen and (max-width: 475px) {
+  html > body {
+    background-color: var(--Dark-cyan);
+  }
+
+  .card {
+    padding: 2em;
+    background: url(./images/bg-pattern-card.svg) no-repeat, white;
+    background-position: top center;
+    background-size: contain;
+    border-radius: 2em;
+    margin: 8em auto;
+  }
+
+  .card__image {
+    display: block;
+    margin: auto;
+    margin-top: 4em;
+    border: 4px solid white;
+    border-radius: 4em;
+  }
+
+  .card__paragraph--bold {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .card__p-age--color {
+    color: var(--Dark-gray);
+  }
+
+  .card__pcity {
+    text-align: center;
+    color: var(--Dark-gray);
+  }
+
+  .card__paragraph--light {
+    color: var(--Dark-gray);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+
+  .flex-row {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    place-items: center;
+    grid-auto-flow: column;
+  }
+
+}
